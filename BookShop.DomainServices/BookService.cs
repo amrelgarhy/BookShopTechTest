@@ -38,13 +38,13 @@ namespace BookShop.DomainServices
         }
 
 
-        public Book ReserveQuantity(Book book, int quantity)
-        {
-            book.Quantity -= quantity;
+        //public Book ReserveQuantity(Book book, int quantity)
+        //{
+        //    book.Quantity -= quantity;
 
-            _bookRepo.Update(book);
+        //    _bookRepo.Update(book);
 
-            return book;
-        }
+        //    return book;
+        //}
     }
 }

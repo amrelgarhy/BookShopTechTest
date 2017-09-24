@@ -10,7 +10,7 @@ namespace BookShop.Lib.Entities
     {
         public Order(long userId)
         {
-            UserId = UserId;
+            UserId = userId;
             if (Books == null)
             {
                 Books = new List<Book>();

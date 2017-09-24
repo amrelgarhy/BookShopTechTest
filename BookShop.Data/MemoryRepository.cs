@@ -47,6 +47,8 @@ namespace BookShop.Data
             return data;
         }
 
+        
+
         public TEntity Update(TEntity entity)
         {
             var foundEntity = Get(entity.Id);

@@ -18,7 +18,6 @@ namespace BookShop.Lib
             client.BaseAddress = new Uri("http://localhost:57363/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
         }
 
         public async Task<IEnumerable<Book>> GetAllBooksAsync()

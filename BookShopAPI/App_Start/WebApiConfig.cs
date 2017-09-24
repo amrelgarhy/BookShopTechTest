@@ -28,10 +28,10 @@ namespace BookShopAPI
         public static void InitTempData()
         {
             MemoryRepository<Book>.data = new List<Book>();
-            MemoryRepository<Book>.data.Add(new Book { Author = "Auth 1", Price = 10, PublishedAt = DateTime.Now.Date, Quantity = 10, QuantityToOrder = 0, Title = "Book1" });
-            MemoryRepository<Book>.data.Add(new Book { Author = "Auth 2", Price = 20, PublishedAt = DateTime.Now.Date, Quantity = 20, QuantityToOrder = 0, Title = "Book2" });
-            MemoryRepository<Book>.data.Add(new Book { Author = "Auth 3", Price = 30, PublishedAt = DateTime.Now.Date, Quantity = 30, QuantityToOrder = 0, Title = "Book3" });
-            MemoryRepository<Book>.data.Add(new Book { Author = "Auth 4", Price = 40, PublishedAt = DateTime.Now.Date, Quantity = 40, QuantityToOrder = 0, Title = "Book4" });
+            MemoryRepository<Book>.data.Add(new Book { Id=1, Author = "Auth 1", Price = 10, PublishedAt = DateTime.Now.Date, Quantity = 10, QuantityToOrder = 0, Title = "Book1" });
+            MemoryRepository<Book>.data.Add(new Book { Id = 2, Author = "Auth 2", Price = 20, PublishedAt = DateTime.Now.Date, Quantity = 20, QuantityToOrder = 0, Title = "Book2" });
+            MemoryRepository<Book>.data.Add(new Book { Id = 3, Author = "Auth 3", Price = 30, PublishedAt = DateTime.Now.Date, Quantity = 30, QuantityToOrder = 0, Title = "Book3" });
+            MemoryRepository<Book>.data.Add(new Book { Id = 4, Author = "Auth 4", Price = 40, PublishedAt = DateTime.Now.Date, Quantity = 40, QuantityToOrder = 0, Title = "Book4" });
         }
     }
 }

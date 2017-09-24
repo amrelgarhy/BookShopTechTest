@@ -31,7 +31,8 @@ namespace BookShop.DomainServices
 
         public Order CreateOrder(long userId)
         {
-            return _orderRepo.Add(new Order(userId));
+            var order = new Order(userId);
+            return _orderRepo.Add(order);
         }
 
         public Order AddBook(Order order, Book book, int qty)
@@ -55,8 +56,8 @@ namespace BookShop.DomainServices
 
                         _orderRepo.Update(order);
 
-                        var bookService = new BookService(_bookRepo);
-                        bookService.ReserveQuantity(book, qty);
+                        //var bookService = new BookService(_bookRepo);
+                        //bookService.ReserveQuantity(book, qty);
                     }
                 }
             }
