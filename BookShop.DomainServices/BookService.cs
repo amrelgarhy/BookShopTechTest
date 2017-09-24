@@ -27,5 +27,24 @@ namespace BookShop.DomainServices
             return _bookRepo.GetAll();
         }
 
+        public Book Get(long bookId)
+        {
+            return _bookRepo.Get(bookId);
+        }
+
+        public Book Add(Book book)
+        {
+            return _bookRepo.Add(book);
+        }
+
+
+        public Book ReserveQuantity(Book book, int quantity)
+        {
+            book.Quantity -= quantity;
+
+            _bookRepo.Update(book);
+
+            return book;
+        }
     }
 }

@@ -4,18 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookShop.DomainEntities
+namespace BookShop.Lib.Entities
 {
-    public class Order : Entity
+    public class Order
     {
         public Order(long userId)
         {
             UserId = UserId;
-            if (Books==null)
+            if (Books == null)
             {
                 Books = new List<Book>();
             }
         }
+
+        public long Id { get; set; }
 
         public long UserId { get; private set; }
 
@@ -26,6 +28,5 @@ namespace BookShop.DomainEntities
         public DateTime OrderedAt { get; set; }
 
         public ICollection<Book> Books { get; set; }
-
     }
 }

@@ -176,7 +176,9 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -253,6 +255,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BookShop.Data\BookShop.Data.csproj">
+      <Project>{ce748cc1-99af-4826-88ac-711f92bb02ad}</Project>
+      <Name>BookShop.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookShop.DomainEntities\BookShop.DomainEntities.csproj">
+      <Project>{6fd03392-e016-4e76-b63c-3cc91bddd659}</Project>
+      <Name>BookShop.DomainEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookShop.DomainServices\BookShop.DomainServices.csproj">
+      <Project>{61388744-00e5-4673-9c91-ced522215b59}</Project>
+      <Name>BookShop.DomainServices</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

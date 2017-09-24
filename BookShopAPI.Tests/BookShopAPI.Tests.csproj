@@ -101,6 +101,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BookShop.Data\BookShop.Data.csproj">
+      <Project>{ce748cc1-99af-4826-88ac-711f92bb02ad}</Project>
+      <Name>BookShop.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookShop.DomainEntities\BookShop.DomainEntities.csproj">
+      <Project>{6fd03392-e016-4e76-b63c-3cc91bddd659}</Project>
+      <Name>BookShop.DomainEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookShop.DomainServices\BookShop.DomainServices.csproj">
+      <Project>{61388744-00e5-4673-9c91-ced522215b59}</Project>
+      <Name>BookShop.DomainServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BookShopAPI\BookShopAPI.csproj">
       <Project>{356F8565-622A-4933-8ED9-10C604C2CEB6}</Project>
       <Name>BookShopAPI</Name>
