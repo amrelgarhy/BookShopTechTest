@@ -10,9 +10,9 @@ namespace BookShop.Lib
 {
     public class OrderManager
     {
-        static HttpClient client = new HttpClient();
+        HttpClient client = new HttpClient();
 
-        static async Task<Order> GetOrderAsync(string path)
+        public async Task<Order> GetOrderAsync(string path)
         {
             Order order = null;
             HttpResponseMessage response = await client.GetAsync(path);
@@ -23,5 +23,7 @@ namespace BookShop.Lib
 
             return order;
         }
+
+       // public async Task<Order> CreateOrder()
     }
 }

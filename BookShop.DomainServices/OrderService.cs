@@ -43,7 +43,7 @@ namespace BookShop.DomainServices
                     if ((book.Quantity - qty) > 0)
                     {
                         var existingBookRecord = order.Books.FirstOrDefault(x => x.Id == book.Id);
-                        if (existingBookRecord!=null)
+                        if (existingBookRecord != null)
                         {
                             existingBookRecord.QuantityToOrder = qty;
                         }
@@ -52,7 +52,7 @@ namespace BookShop.DomainServices
                             book.QuantityToOrder = qty;
                             order.Books.Add(book);
                         }
-                        
+
                         _orderRepo.Update(order);
 
                         var bookService = new BookService(_bookRepo);

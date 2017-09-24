@@ -8,14 +8,21 @@ using System.Web.Http;
 
 namespace BookShopAPI.Controllers
 {
-    public class BooksController : ApiController
+    public class BooksController : BaseApiController
     {
 
         public IHttpActionResult Get()
         {
-            var service = new BookService();
+            try
+            {
+                var service = new BookService();
 
-            return Ok(service.GetAll());
+                return Ok(service.GetAll());
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
         }
     }
 }

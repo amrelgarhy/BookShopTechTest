@@ -21,16 +21,16 @@ namespace BookShop.Lib
 
         }
 
-        public async Task<Book> GetAllBooksAsync()
+        public async Task<IEnumerable<Book>> GetAllBooksAsync()
         {
-            Book book = null;
+            IEnumerable<Book> books = new List<Book>();
             HttpResponseMessage response = await client.GetAsync("api/Books");
             if (response.IsSuccessStatusCode)
             {
-                book = await response.Content.ReadAsAsync<Book>();
+                books = await response.Content.ReadAsAsync<IEnumerable<Book>>();
             }
 
-            return book;
+            return books;
         }
     }
 }
